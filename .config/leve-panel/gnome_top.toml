@@ -1,0 +1,51 @@
+# ========================================================================================
+#
+#                                   Leve Panel
+#                                 Default Config
+#
+# ========================================================================================
+
+# Panel Settings
+[Panel]
+pos = "top"  # "top", "bottom", "left", "right"
+layer = "top"  # "background", "bottom", "top", "overlay"
+size = 40 # pixels
+#roundness = 20
+#margin_top = 10
+#margin_bottom = 10
+#margin_left = 25
+#margin_right = 25
+color = "black" # Hex Color, or "rgba(40, 50, 160, 0.25)"
+icon_size = 28
+scroll_up = "swaymsg workspace prev"
+scroll_down = "swaymsg workspace next"
+#exclusive_zone = 52 # reserve space, defaults to size of panel
+
+
+# Widgets appear left to right
+[[Left]]
+widget = "desktop"
+style = "dots" # "num", "numbers", "dots"
+exec = "griddle"
+terminal = false
+
+
+# Center Widgets
+[[Center]]
+widget = "clock"
+exec = "gsimplecal"
+terminal = false
+
+
+# Widgets on right side
+# are added from right to left
+[[Right]]
+widget = "power"
+exec = "wlogout"
+terminal = false
+
+[[Right]]
+widget = "volume"
+exec = "pavucontrol"
+terminal = false
+
